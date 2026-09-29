@@ -1,18 +1,13 @@
-
 <html>
-<body onload="showhideall('none')">
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />These video lectures are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.<br><br>
-<table><caption>link meanings</caption><tbody>
-<tr><th scope="col">link</th><th scope="col">meaning</th></tr>
-<tr><td>&nbsp;&nbsp;m4v</td><td>&nbsp;&nbsp;MPEG4 video format</td></tr>
-<tr><td>&nbsp;&nbsp;mp4</td><td>&nbsp;&nbsp;H.264 video format</td></tr>
-<tr><td>&nbsp;&nbsp;page-1...</td><td>&nbsp;&nbsp;Page/blackboard images (jpg)</td></tr>
-<tr><td>&nbsp;&nbsp;comments</td><td>&nbsp;&nbsp;Additional comments (pdf)</td></tr>
-</tbody></table>
-<br>
+<body onload="showhidestart('none')">
+<h1 style="margin-bottom: 0;">Welcome to Westerberg's Online Video Archive for 4C!</h1>
+<p style="margin-top: 0; margin-bottom: 0">Uploaded and mantained by <b>thecoolestrock</b>, click the buttons below to browse.</p>
+<p style="margin-top: 0;">Check out the "hide all" button for a <u>secret</u> suprise!</p>
 <a href="javascript: showhideall('none');">Hide all</a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="javascript: showhideall('block');">Show all</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript: showhidestart('none');">Chapter Titles Only</a>
 <ul type="disc" id="0">
  <li>PHYC 4C Lectures (39:25:41)&nbsp; <a href="javascript: toggle('1791');">Show/Hide</a>
   <ul type="circle" id="1791">
@@ -445,6 +440,13 @@
   </ul>
  </li>
 </ul>
+<ul type="disc" id="9999">
+ <li>Anal Zhang's Sneaky Link:&nbsp; <a href="https://youtu.be/daP5md9eSLc">[Leave a Like!]</a>
+  <ul>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/daP5md9eSLc?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </ul> 
+ </li>
+</ul>
 </body>
 <script>
 function toggle(id) {
@@ -462,7 +464,7 @@ function showhide(id,stat) {
   if(!x) alert("error: not found!");
   else x.style.display = stat;
 }
-function showhideall(stat) {
+function showhideall(stat) { //im not even touching this
   showhide("1791",stat);
   showhide("1792",stat);
   showhide("1794",stat);
@@ -499,6 +501,17 @@ function showhideall(stat) {
   showhide("1955",stat);
   showhide("1959",stat);
   showhide("1965",stat);
+  if(stat == 'none')
+    showhide("9999",'block');
+  else
+    showhide("9999",'none');
+}
+function showhidestart(stat){
+  showhideall('block');
+  let start = [1792, 1811, 1822, 1831, 1891, 1911, 1934, 9999];
+  for (let i = 0; i < start.length; i++){
+    showhide(start[i],stat);
+  }
 }
 </script>
 </html>
