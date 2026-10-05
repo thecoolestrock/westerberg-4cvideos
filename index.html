@@ -1,5 +1,4 @@
 <html>
-  <script src="app.js" defer></script>
   <body onload="showhidestart('none')">
     <h1 style="margin-bottom: 0">
       Welcome to Westerberg's Online Video Archive for 4C!
@@ -11,7 +10,7 @@
     <p style="margin-top: 0">
       Check out the "hide all" button for a <u>secret</u> suprise!
     </p>
-    <a href="javascript: showhideall('none');" id="play-btn">Hide all</a>
+    <a href="javascript: showhideall('none');">Hide all</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="javascript: showhideall('block');">Show all</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -3029,11 +3028,91 @@
     <ul type="disc" id="sneaky">
       <li>
         Anal Zhang's Sneaky Link:&nbsp;
-        <a href="https://www.youtube.com/watch?v=daP5md9eSLc"
-          >[Leave a Like!]</a
-        >
-        <div id="video-container"></div>
+        <a href="https://youtu.be/daP5md9eSLc">[Leave a Like!]</a>
+        <ul>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/daP5md9eSLc?autoplay=1&mute=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </ul>
       </li>
     </ul>
   </body>
+  <script>
+    function toggle(id) {
+      var x = document.getElementById(id);
+      if (!x) alert("error: not found!");
+      else {
+        if (x.style.display == "none") x.style.display = "block";
+        else x.style.display = "none";
+      }
+    }
+    function showhide(id, stat) {
+      var x = document.getElementById(id);
+      if (!x) alert("error: not found!");
+      else x.style.display = stat;
+    }
+    function showhideall(stat) {
+      //im not even touching this
+      showhide("1", stat);
+      showhide("2", stat);
+      showhide("3", stat);
+      showhide("4", stat);
+      showhide("5", stat);
+      showhide("6", stat);
+      showhide("7", stat);
+      showhide("8", stat);
+      showhide("9", stat);
+      showhide("10", stat);
+      showhide("11", stat);
+      showhide("12", stat);
+      showhide("13", stat);
+      showhide("14", stat);
+      showhide("15", stat);
+      showhide("16", stat);
+      showhide("17", stat);
+      showhide("18", stat);
+      showhide("19", stat);
+      showhide("20", stat);
+      showhide("21", stat);
+      showhide("22", stat);
+      showhide("23", stat);
+      showhide("24", stat);
+      showhide("25", stat);
+      showhide("26", stat);
+      showhide("27", stat);
+      showhide("27", stat);
+      showhide("28", stat);
+      showhide("29", stat);
+      showhide("30", stat);
+      showhide("31", stat);
+      showhide("32", stat);
+      showhide("33", stat);
+      showhide("34", stat);
+      showhide("35", stat);
+      if (stat == "none") showhide("sneaky", "block");
+      else showhide("sneaky", "none");
+    }
+    function showhidestart(stat) {
+      showhideall("block");
+      let start = [2, 7, 10, 13, 22, 26, 29];
+      for (let i = 0; i < start.length; i++) {
+        showhide(start[i], stat);
+      }
+    }
+  </script>
 </html>
